@@ -3,6 +3,10 @@
 num1=$(<num1.txt)
 num2=$(<num2.txt)
 
+declare -a nums
+
+nums=(num1 num2)
+
 if [ "$#" == 0 ]; then
 	echo "...none operator parameter..."
 	echo "1) add"
@@ -15,13 +19,13 @@ fi
 
 case $1 in
 	1) op="add" 
-		let val=$num1+$num2;;
+		let val=${nums[0]}+${nums[1]};;
 	2) op="sub" 
-		let val=$num1-$num2;;
+		let val=${nums[0]}-${nums[1]};;
 	3) op="div" 
-		let val=$num1/$num2;;
+		let val=${nums[0]}/${nums[1]};;
 	4) op="mul" 
-		let val=$num1*$num2;;
+		let val=${nums[0]}*${nums[1]};;
 	*) exit 0;;
 esac
 
