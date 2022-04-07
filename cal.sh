@@ -7,6 +7,8 @@ declare -a nums
 
 nums=(num1 num2)
 
+echo "project management in github"
+
 if [ "$#" == 0 ]; then
 	echo "...none operator parameter..."
 	echo "1) add"
