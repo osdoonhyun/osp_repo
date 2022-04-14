@@ -5,36 +5,41 @@ import sys
 
 
 def CountFrequency(filename, n):
-  f=open(filename)
-  lines=f.readlines()
+    f=open(filename)    
+    lines=f.readlines()
 
- for l in lines:
-    print(l)
+    for l in lines:
+        print(l)
 
-  for line in lines:
-    new_string=re.sub(r"[^a-zA-Z0-9]"," ",line)
+    for line in lines:
+        new_string=re.sub(r"[^a-zA-Z0-9]"," ",line)
 
-    print("1:" + new_string)
-    new_list=new_string.split()
-    print(new_list)
+        print("1:" + new_string)
+        new_list=new_string.split()
+        print(new_list)
 
-    new_dic = dict.fromkeys(new_list)
+        new_dic = dict.fromkeys(new_list)
 
-    text={}
+        text={}
 
-    print(new_dic)
+        print(new_dic)
 
-    for item in new_dic:
-      if (item in text):
-        text[item] += 1
-      else:
-        text[item] = 1
+        for item in new_dic:
+            if (item in text):
+                text[item] += 1
+            else:
+                text[item] = 1
+
+    word_list=sorted(text.items(),key=lambda x: x[1],reverse=True)
+
+    for key in word_list(n):
+        print("%-20s %20d" %(key,word_list[key]))
 
 
 if __name__ == "__main__":
 
-  input1 = str(sys.argv[1])
-  input2 = int(sys.argv[2])
+    input1 = str(sys.argv[1])
+    input2 = int(sys.argv[2])
 
-  CountFrequency(input1,input2)
+    CountFrequency(input1,input2)
 
