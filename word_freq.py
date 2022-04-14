@@ -20,6 +20,16 @@ def CountFrequency(filename, n):
 
     new_dic = dict.fromkeys(new_list)
 
+    text={}
+
+    print(new_dic)
+
+    for item in new_dic:
+      if (item in text):
+        text[item] += 1
+      else:
+        text[item] = 1
+
 
 if __name__ == "__main__":
 
