@@ -13,20 +13,39 @@ def CountFrequency(filename, n):
 
         new_list=new_string.split()
 
-        new_dic = dict.fromkeys(new_list)
+#        new_dic = dict.fromkeys(new_list
 
         text={}
 
-        for item in new_dic:
-            if (item in text):
-                text[item] += 1
+        for word in new_list:
+            if (word in new_list:
+                text[word] += 1
             else:
-                text[item] = 1
+                text[word] = 1
 
-    word_list=sorted(text.items(),key=lambda x: x[1],reverse=True)
+    sortingCntText = sorted(text.items(), key= lambda x: x[1], reverse=True)
 
-    for key in word_list(n):
-        print("%-20s %20d" %(key,word_list[key]))
+    cnt = 0 
+    for key in sortingCntText:
+        cnt = cnt + 1
+        if(cnt <= n):
+            print("%-20s %20d" %(key[0],key[1]))
+        else:
+            break
+
+
+
+
+#        for item in new_dic:
+#           if (item in text):
+#               text[item] += 1
+#           else:
+#               text[item] = 1
+
+#   word_list=sorted(text.items(),key=lambda x: x[1],reverse=True)
+
+#   for key in word_list(n):
+#       print("%-20s %20d" %(key,word_list[key]))
 
 
 if __name__ == "__main__":
