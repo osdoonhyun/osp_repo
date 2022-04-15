@@ -8,6 +8,7 @@ def CountFrequency(filename, n):
     f=open(filename)    
     lines=f.readlines()
 
+    text= {}
     for line in lines:
         new_string=re.sub(r"[^a-zA-Z0-9]"," ",line)
 
@@ -15,10 +16,10 @@ def CountFrequency(filename, n):
 
 #        new_dic = dict.fromkeys(new_list
 
-        text={}
+        
 
         for word in new_list:
-            if (word in new_list:
+            if (word in text):
                 text[word] += 1
             else:
                 text[word] = 1
