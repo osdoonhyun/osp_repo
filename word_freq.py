@@ -14,10 +14,6 @@ def CountFrequency(filename, n):
 
         new_list=new_string.split()
 
-#        new_dic = dict.fromkeys(new_list
-
-        
-
         for word in new_list:
             if (word in text):
                 text[word] += 1
@@ -33,21 +29,6 @@ def CountFrequency(filename, n):
             print("%-20s %20d" %(key[0],key[1]))
         else:
             break
-
-
-
-
-#        for item in new_dic:
-#           if (item in text):
-#               text[item] += 1
-#           else:
-#               text[item] = 1
-
-#   word_list=sorted(text.items(),key=lambda x: x[1],reverse=True)
-
-#   for key in word_list(n):
-#       print("%-20s %20d" %(key,word_list[key]))
-
 
 if __name__ == "__main__":
 
